@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font"
+ />
+</head>
+<body>
+    <div class="container1">
+        <div class="row">
+            <img class="bg" src="img/masuk.png" alt="">
+            <div class="content">
+
+                <div id="masuk">
+                    <img class="logo" src="img/logo.png" alt="">
+                    <form action="">
+                        <div class="input">
+                            <h2>Email</h2>
+                            <input type="text" name="email" placeholder="example@youemail.com">
+                            <h2>Password</h2>
+                            <input type="text" name="password" placeholder="password">
+                            <button id="btn">Masuk</button>
+                            <p>Belum punya akun? 
+                                <a id="signup" href="#">Daftar</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="daftar">
+                    <form action="">
+                        <div class="input">
+                            <h2>Nama Lengkap</h2>
+                            <input type="text" name="nama" placeholder="full name">
+                            <h2>Email</h2>
+                            <input type="text" name="email" placeholder="example@youemail.com">
+                            <h2>Password</h2>
+                            <input type="text" name="password" placeholder="password">
+                            <button>Daftar</button>   
+                            <p>Sudah punya akun? 
+                                <a id="signin" href="#">Masuk</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+         </div>
+    </div> 
+</body>
+
+    <script>
+        document.getElementById("signup").addEventListener("click", function(event){
+            event.preventDefault()
+            document.getElementById("masuk").style.display = "none"
+            document.getElementById("daftar").style.display = "block"
+        })
+
+        document.getElementById("signin").addEventListener("click", function(event){
+            event.preventDefault()
+            document.getElementById("masuk").style.display = "block"
+            document.getElementById("daftar").style.display = "none"
+        })
+        document.getElementById("btn").addEventListener("click", function(event){
+            event.preventDefault()
+            window.location="index.html"
+        })
+    </script>
+</html>

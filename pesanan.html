@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+</head>
+    <body>
+        <nav class="navbar">
+            <img class="navbar-logo" src="img/logo.png" alt="">
+            <div class="navbar-nav">
+                <a href="index.html">Home</a>
+                <a href="artikel.html">Catatan</a>
+                <a href="pesanan.html">Keuangan</a>
+                <a href="akun.html">Akun</a>
+                <a href="keranjang.html"><i data-feather="shopping-cart" ></i></a>
+            </div>
+        </nav>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="content">
+                    <img  class="com1" src="img/Component1.png" alt="">
+        
+                            </div>
+
+    <title>Catatan Keuangan & Penjualan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #28a745;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            background: white;
+            padding: 50px;
+            margin-top: 10px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catatan Keuangan & Penjualan</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Tambah Transaksi</h2>
+            <form id="keuanganForm">
+                <div class="form-group">
+                    <label for="produk">Produk:</label>
+                    <input type="text" id="produk" required>
+                </div>
+                <div class="form-group">
+                    <label for="jumlahTerjual">Jumlah Terjual (kg):</label>
+                    <input type="number" id="jumlahTerjual" required>
+                </div>
+                <div class="form-group">
+                    <label for="harga">Harga per kg (Rp):</label>
+                    <input type="number" id="harga" required>
+                </div>
+                <button type="submit">Simpan</button>
+            </form>
+        </div>
+        <div class="content">
+            <h2>Riwayat Keuangan & Penjualan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produk</th>
+                        <th>Jumlah Terjual (kg)</th>
+                        <th>Harga per kg (Rp)</th>
+                        <th>Total (Rp)</th>
+                    </tr>
+                </thead>
+                <tbody id="riwayatKeuangan">
+                    <!-- Data akan ditambahkan di sini -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.getElementById('keuanganForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const produk = document.getElementById('produk').value;
+            const jumlahTerjual = document.getElementById('jumlahTerjual').value;
+            const harga = document.getElementById('harga').value;
+            const total = jumlahTerjual * harga;
+            
+            const tabel = document.getElementById('riwayatKeuangan');
+            const row = tabel.insertRow();
+            row.innerHTML = `<td>${produk}</td><td>${jumlahTerjual}</td><td>${harga}</td><td>${total}</td>`;
+            
+            document.getElementById('keuanganForm').reset();
+        });
+    </script>
+</body>
+</html>

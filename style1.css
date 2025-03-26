@@ -1,0 +1,375 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+  height: 80px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.navbar .navbar-logo {
+  margin-left: 4%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+.navbar .navbar-nav a {
+  align-self: center;
+  color: #000;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+  font-family: Inter;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbar .navbar-nav a:hover {
+  color: #6bc86e;
+  transform: scale(1.1);
+}
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linier;
+}
+
+.navbar .navbar-nav .active {
+  color: #6bc86e;
+  transform: scale(1.1);
+}
+/* END NAVBAR */
+
+/* HOME */
+.hero {
+  min-height: 100vh;
+}
+.hero .container .content {
+  background: #fff;
+  font-family: Inter;
+  margin: 5rem 2rem 0 4.4rem;
+}
+.hero .container .content .com1 {
+  width: 100%;
+}
+.jenis {
+  margin-top: 3rem;
+}
+
+.box {
+  display: flex;
+}
+.card img {
+  padding-right: 1.5rem;
+  width: 80%;
+}
+.lihat {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+button {
+  border: solid 1px;
+  color: rgb(0, 0, 0);
+  padding: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 15px;
+  border-radius: 50px;
+  background-color: #6bc86e;
+  border-color: #05fd00;
+}
+.jenis-img {
+  width: 100%;
+}
+/* END HOME */
+
+/* MASUK */
+.container1 {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  display: flex;
+  background: #fff;
+  font-family: Inter;
+}
+.row {
+  display: flex;
+}
+.row .bg {
+  width: 50%;
+}
+.content {
+  margin: 3rem 12rem 0rem 12rem;
+}
+.content .logo {
+  margin-right: 1.5rem;
+  width: 50%;
+}
+.content form {
+  margin-top: 2rem;
+}
+.content form h2 {
+  font-size: 1.3rem;
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+.content form .input input {
+  text-align-last: center;
+  width: 310px;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 3px #6bc86e solid;
+}
+.content form .input button {
+  margin-top: 3rem;
+  width: 317px;
+  height: 40px;
+  font-size: 1.2rem;
+  background: #6bc86e;
+  border-radius: 30px;
+  border: 1px #05fd00 solid;
+  transition: transform 0.3s;
+}
+.content form .input button:hover {
+  transform: scale(1.1);
+  background-color: #21ff1ebd;
+}
+.content form .input button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.container1 .content form p {
+  margin-left: 4rem;
+}
+
+/* END MASUK */
+
+/* show masuk and hide daftar */
+
+#daftar {
+  margin-top: 6.25rem;
+  display: none;
+}
+
+/* ARTIKEL */
+.artikel {
+  margin: 8rem 4rem 0 4rem;
+  font-family: inter;
+}
+.h3-artikel {
+  font-style: bold;
+  font-size: 2.2rem;
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.box2 h3,
+.box2 img {
+  font-size: 1.2rem;
+  width: 350px;
+}
+/* END ARTIKEL */
+
+/*PESANAN */
+.pesanan {
+  margin: 8rem 4rem 0 4rem;
+  font-family: inter;
+}
+.h3-pesanan {
+  font-size: 1.5rem;
+}
+.row-pesanan {
+  width: 100%;
+  height: 100%;
+  background: #eef3ee;
+  box-shadow: 0px 8px 8px #6bc86e;
+  border-radius: 20px;
+}
+/* END PESANAN */
+
+/* CHECKOUT */
+.checkout {
+  margin: 2rem 2rem 0 4rem;
+  font-family: inter;
+  font-size: 1.7rem;
+}
+.box-penerima,
+.box-detail {
+  width: 100%;
+  height: 100%;
+  background: #eef3ee;
+  border: solid 1px;
+  border-radius: 20px;
+  border-color: #05fd00;
+  margin-top: 1.5rem;
+}
+.isi-penerima {
+  display: flex;
+  justify-content: space-between;
+  height: 8rem;
+  margin-left: 2rem;
+  font-size: 1.4rem;
+}
+.isi-penerima .edit {
+  margin-top: 2rem;
+  margin-right: 3rem;
+}
+table {
+  width: 100%;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+thead {
+  margin-top: 1rem;
+}
+table td {
+  margin: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #6bc86e;
+  font-family: inter;
+}
+.container-footer {
+  display: flex;
+  margin: 4rem;
+  flex-wrap: wrap;
+}
+.content-footer {
+  flex-wrap: wrap;
+  width: 50%;
+  padding-top: 1.5rem;
+  padding-right: 3rem;
+  font-size: 1.3rem;
+}
+
+.form-footer {
+  display: flex;
+  margin-top: 5.5rem;
+}
+.input-form {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: #05fd00;
+}
+.bawah {
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+.bawah a {
+  text-decoration: none;
+  font-family: inter;
+  color: #000;
+}
+.btn-footer {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 10px;
+  margin-left: 1rem;
+}
+
+/* AKUN */
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+  border-radius: 50px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+}
+
+.profile-card .image img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.profile-card .text-data {
+  margin-left: 50px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.btn-ubah {
+  text-decoration: none;
+  color: #000;
+  background-color: #6bc86e;
+  padding: 10px 60px;
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+.btn-ubah:hover,
+.btn-out:hover {
+  opacity: 90%;
+}
+
+.main {
+  box-sizing: border-box;
+  width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main table tr td {
+  border-bottom: 1px solid #6bc86e;
+  border-top: 1px solid #6bc86e;
+  padding: 20px 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.main h3 {
+  margin: 50px 0;
+}
+
+.btn-out {
+  text-decoration: none;
+  color: #000;
+  background-color: #6bc86e;
+  border-radius: 30px;
+  padding: 10px 30px;
+  margin: 20px;
+}
